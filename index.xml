@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Commitsar documentation</title>
+    <link>https://commitsar.tech/</link>
+    <description>Recent content on Commitsar documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Aug 2019 15:46:39 +0200</lastBuildDate>
+    
+	<atom:link href="https://commitsar.tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://commitsar.tech/posts/</link>
+      <pubDate>Wed, 14 Aug 2019 15:46:39 +0200</pubDate>
+      
+      <guid>https://commitsar.tech/posts/</guid>
+      <description>Introduction Tool to make sure your commits are compliant with conventional commits. It is aimed mainly at CIs to prevent branches with commits that don&amp;rsquo;t comply. Usage as a pre-commit hook is also under consideration.</description>
+    </item>
+    
+  </channel>
+</rss>
