@@ -26,7 +26,7 @@
 
 
 
-<script src='/js/all_nosearch.js'></script>
+<script src='/js/all.js'></script>
 
     
 </head>
@@ -42,11 +42,22 @@
          <img src='/images/logo.png' class="logo" />
          
         
+        <div class="search">
+            <input type="search" class="search" id="input-search" placeholder='Search'>
+        </div>
+        <ul class="search-results"></ul>
+        
         
     <ul id="toc" class="toc-list-h1">
         
         
         <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+        
+        <a href="#usage" class="toc-h1 toc-link" data-title="Usage">Usage</a>
+        
+        <a href="#example-for-circleci" class="toc-h2 toc-link" data-title="Example for CircleCI">Example for CircleCI</a>
+        
+        <a href="#from-binary" class="toc-h2 toc-link" data-title="From binary">From binary</a>
         
     </ul>
 
@@ -64,6 +75,35 @@
 <h1 id="introduction">Introduction</h1>
 
 <p>Tool to make sure your commits are compliant with <a href="https://www.conventionalcommits.org">conventional commits</a>. It is aimed mainly at CIs to prevent branches with commits that don&rsquo;t comply. Usage as a pre-commit hook is also under consideration.</p>
+
+<h1 id="usage">Usage</h1>
+
+<p>Commitsar is shipped as a Dockerfile. This is the easiest way to add it to your CI.</p>
+
+<p><strong>Important: Commitsar currently needs to be in the same folder as the git repository you want checked</strong></p>
+
+<h2 id="example-for-circleci">Example for CircleCI</h2>
+
+<blockquote>
+<p>CircleCI</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">validate-commits:
+	    docker:
+	      - image: commitsar/commitsar
+	    steps:
+	      - checkout
+	      - run: commitsar</code></pre></div>
+<h2 id="from-binary">From binary</h2>
+
+<blockquote>
+<p>Binary</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">- curl -L -O https://github.com/commitsar-app/commitsar/releases/download/v0.0.2/commitsar_v0.0.2_Linux_x86_64.tar.gz
+- tar -xzf commitsar_v0.0.2_Linux_x86_64.tar.gz
+- ./commitsar</code></pre></div>
+<blockquote>
+<p><strong>Important</strong> adjust for current version</p>
+</blockquote>
 
     
 

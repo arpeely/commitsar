@@ -3,21 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://commitsar.tech/posts/</loc>
-    <lastmod>2019-08-14T15:46:39+02:00</lastmod>
+    <loc>https://commitsar.tech/</loc>
   </url>
   
   <url>
     <loc>https://commitsar.tech/</loc>
-    <lastmod>2019-08-14T15:46:39+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://commitsar.tech/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://commitsar.tech/tags/</loc>
   </url>
   
 </urlset>
