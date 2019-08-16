@@ -8,6 +8,7 @@
   
   <url>
     <loc>https://commitsar.tech/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
