@@ -80,7 +80,25 @@
 
 <p>Commitsar is shipped as a Dockerfile. This is the easiest way to add it to your CI.</p>
 
-<p><strong>Important: Commitsar currently needs to be in the same folder as the git repository you want checked</strong></p>
+<p><strong>Important: Commitsar currently needs to be run in the same folder as the git repository you want checked, currently no override is provided for setting path to git repo see <a href="https://github.com/commitsar-app/commitsar/issues/93">https://github.com/commitsar-app/commitsar/issues/93</a></strong></p>
+
+<h4 id="github-action">Github action</h4>
+
+<blockquote>
+<p>Github actions</p>
+</blockquote>
+
+<p>Checkout git in order to get commits and master branch</p>
+
+<pre><code>- name: Check out code into the Go module directory
+        uses: actions/checkout@v1
+</code></pre>
+
+<p>Run the Commitsar action</p>
+
+<pre><code>- name: Commitsar Action
+  uses: commitsar-app/commitsar@v0.6.3 (substitute for current version)
+</code></pre>
 
 <h2 id="example-for-circleci">Example for CircleCI</h2>
 
