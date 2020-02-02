@@ -1,8 +1,9 @@
 package text
 
 import (
-	"github.com/outillage/quoad"
 	"testing"
+
+	"github.com/outillage/quoad"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -12,7 +13,7 @@ func TestParseCommit(t *testing.T) {
 
 	tests := map[string]quoad.Commit{
 		"chore: add something\n":               quoad.Commit{Category: "chore", Heading: "add something", Hash: testHash},
-		"chore(ci): added new CI stuff\n":      quoad.Commit{Category: "chore", Scope: "ci", Heading: "added new CI stuff", Hash: testHash},
+		"chore(ci-boop): added new CI stuff\n": quoad.Commit{Category: "chore", Scope: "ci-boop", Heading: "added new CI stuff", Hash: testHash},
 		"feat: added a new feature\n":          quoad.Commit{Category: "feat", Heading: "added a new feature"},
 		"fix!: breaking change\n":              quoad.Commit{Category: "fix", Breaking: true, Heading: "breaking change"},
 		"fix(security)!: breaking\n":           quoad.Commit{Category: "fix", Scope: "security", Breaking: true, Heading: "breaking"},
