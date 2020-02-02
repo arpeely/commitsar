@@ -28,7 +28,7 @@ func TestCheckMessageTitleNonStrict(t *testing.T) {
 			quoad.Commit{Category: "fix!", Breaking: true, Heading: "breaking"},
 		},
 		errScopeNonConform: []quoad.Commit{
-			quoad.Commit{Category: "fix", Scope: "security(stuff)", Heading: "should break"},
+			quoad.Commit{Category: "fix", Scope: "security stuff", Heading: "should break"},
 		},
 		errCategoryMissing: []quoad.Commit{
 			quoad.Commit{},
